@@ -3,8 +3,9 @@ Dotfiles for arch linux
 
 ### Symlinks
 * ~/ & /root/:
-    * .Xdefaults
+    * .zshrc
 * ~/.config/:
     * i3
+    * termite
 * /etc/:
     * i3status.conf
