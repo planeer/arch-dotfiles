@@ -7,5 +7,7 @@ Dotfiles for arch linux
 * ~/.config/:
     * i3
     * termite
+    * ranger
+    * rofi
 * /etc/:
     * i3status.conf
