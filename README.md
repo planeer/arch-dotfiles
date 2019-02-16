@@ -9,5 +9,6 @@ Dotfiles for arch linux
     * termite
     * ranger
     * rofi
+    * polybar
 * /etc/:
     * i3status.conf
