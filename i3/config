@@ -165,3 +165,6 @@ bindsym $mod+r mode "resize"
 
 # Polybar init
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# For popup calendar
+for_window [class="Yad"] floating enable
