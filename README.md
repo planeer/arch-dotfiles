@@ -4,6 +4,7 @@ Dotfiles for arch linux
 ### Symlinks
 * ~/ & /root/:
     * .zshrc
+    * .zprofile
 * ~/.config/:
     * i3
     * termite
