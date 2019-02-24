@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $set_wallpaper feh --bg-fill ~/Documents/wallpaper.jpg
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -168,3 +169,6 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # For popup calendar
 for_window [class="Yad"] floating enable
+
+# Wallpaper
+exec --no-startup-id $set_wallpaper
