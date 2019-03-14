@@ -29,7 +29,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = WunconSiji:pixelsize=10;0
 font-3 = "FontAwesome:size=10;0"
 
-modules-left = bspwm i3
+modules-left = i3
 modules-right = wired-network wireless-network battery volume filesystem xbacklight memory cpu temperature temperature_laptop  popup-calendar
 
 tray-position = right
@@ -93,7 +93,6 @@ pin-workspaces = true
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
 label-focused-padding = 2
 
 label-occupied = %index%
@@ -121,7 +120,6 @@ label-mode-background = ${colors.primary}
 
 label-focused = %index%
 label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = #ddd
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 label-unfocused = %index%
