@@ -1,6 +1,7 @@
 [colors]
 background = #aa000000
-background-alt = #666
+background-alt = #777
+background-not-focused = #333
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -136,8 +137,7 @@ label-unfocused = %index%
 label-unfocused-padding = 2
 
 label-visible = %index%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-background}
+label-visible-background = ${colors.background-not-focused}
 label-visible-padding = ${self.label-focused-padding}
 
 label-urgent = %index%!
