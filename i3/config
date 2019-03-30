@@ -43,6 +43,9 @@ bindsym $mod+d exec rofi -show run
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+# lock screen
+bindsym $mod+Shift+x exec i3lock-wrapper
+
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
