@@ -13,8 +13,6 @@ Dotfiles for arch linux
     * ranger
     * rofi
     * polybar
-* /etc/:
-    * i3status.conf
 * ~/.bin/scripts/:
     * lock/lock.sh
 * ~/Documents/:
