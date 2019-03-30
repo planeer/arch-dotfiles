@@ -44,7 +44,7 @@ bindsym $mod+d exec rofi -show run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # lock screen
-bindsym $mod+Shift+x exec i3lock-wrapper
+bindsym $mod+Shift+x exec "$HOME/arch-dotfiles/lock/lock.sh $HOME/arch-dotfiles/lock/lock.png"
 
 # change focus
 bindsym $mod+j focus left

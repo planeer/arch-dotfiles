@@ -15,3 +15,7 @@ Dotfiles for arch linux
     * polybar
 * /etc/:
     * i3status.conf
+* ~/.bin/scripts/:
+    * lock/lock.sh
+* ~/Documents/:
+    * lock/lock.png
