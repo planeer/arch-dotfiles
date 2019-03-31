@@ -44,7 +44,7 @@ bindsym $mod+d exec rofi -show run
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # lock screen
-bindsym $mod+Shift+l exec "~/.bin/scripts/lock.sh ~/Documents/lock.png"
+bindsym $mod+Shift+x exec "~/.bin/scripts/lock.sh ~/Documents/lock.png"
 
 # change focus
 bindsym $mod+j focus left
