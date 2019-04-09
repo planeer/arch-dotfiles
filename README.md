@@ -7,12 +7,14 @@ Dotfiles for arch linux
 * ~/ & /root/:
     * .zshrc
     * .zprofile
+    * .gtkrc-2.0
 * ~/.config/:
     * i3
     * termite
     * ranger
     * rofi
     * polybar
+    * gtk-3.0
 * ~/.bin/scripts/:
     * lock/lock.sh
 * ~/Documents/:
