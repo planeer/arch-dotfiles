@@ -15,6 +15,7 @@ Dotfiles for arch linux
     * rofi
     * polybar
     * gtk-3.0
+    * dunst
 * ~/.bin/scripts/:
     * lock/lock.sh
 * ~/Documents/:
