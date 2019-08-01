@@ -53,7 +53,6 @@ window {
 
 mainbox {
 	spacing:  0.8em;
-	children: [ entry,listview,sidebar ];
 }
 
 button { padding: 5px 2px; }
@@ -66,6 +65,7 @@ button selected {
 inputbar {
 	padding: 5px;
 	spacing: 5px;
+	children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 
 listview {
@@ -77,10 +77,8 @@ listview {
 element { padding: 10px; }
 
 entry {
-	expand:         false;
 	text-color:     @normal-foreground;
 	vertical-align: 1;
-	padding:        5px;
 }
 
 element normal.normal {
@@ -128,4 +126,11 @@ element alternate.urgent {
 element alternate.active {
 	background-color: @active-background;
 	text-color:       @active-foreground;
+}
+
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @normal-foreground;
 }
