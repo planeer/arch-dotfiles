@@ -65,7 +65,7 @@ button selected {
 inputbar {
 	padding: 5px;
 	spacing: 5px;
-	children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+	children:   [ entry ];
 }
 
 listview {
