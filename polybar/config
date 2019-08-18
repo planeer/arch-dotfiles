@@ -60,10 +60,49 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = Siji:pixelsize=10;0
 font-3 = "FontAwesome:size=10;0"
 
-modules-left = filesystem
+modules-left = filesystem menu-apps
 modules-right = memory cpu temperature temperature_laptop
 
 bottom = true
+
+[module/menu-apps]
+type = custom/menu
+
+label-open = Menu
+label-close = Close
+
+; Optional item separator
+; Default: none
+label-separator = " | "
+
+; If true, <label-toggle> will be to the left of the menu items (default).
+; If false, it will be on the right of all the items.
+expand-right = true
+
+; "menu-LEVEL-N" has the same properties as "label-NAME" with
+; the additional "exec" property
+;
+; Available exec commands:
+;   menu-open-LEVEL
+;   menu-close
+; Other commands will be executed using "/usr/bin/env sh -c $COMMAND"
+
+;pcmanfc
+menu-0-0 = " Files "
+menu-0-0-exec = pcmanfm &
+menu-0-0-foreground = ${colors.foreground}
+; rofi
+menu-0-1 = " Menu "
+menu-0-1-exec = rofi -show run
+menu-0-1-foreground = ${colors.foreground}
+; reboot
+menu-0-2 = "  "
+menu-0-2-exec = systemctl reboot
+menu-0-2-foreground = ${colors.foreground}
+; shutdown
+menu-0-3 = "  "
+menu-0-3-exec = systemctl poweroff
+menu-0-3-foreground = ${colors.foreground}
 
 [module/pacman-updates]
 type = custom/script
