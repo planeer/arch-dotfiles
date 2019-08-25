@@ -72,20 +72,9 @@ label-open = Menu
 label-close = Close
 
 ; Optional item separator
-; Default: none
 label-separator = " | "
 
-; If true, <label-toggle> will be to the left of the menu items (default).
-; If false, it will be on the right of all the items.
 expand-right = true
-
-; "menu-LEVEL-N" has the same properties as "label-NAME" with
-; the additional "exec" property
-;
-; Available exec commands:
-;   menu-open-LEVEL
-;   menu-close
-; Other commands will be executed using "/usr/bin/env sh -c $COMMAND"
 
 ;pcmanfc
 menu-0-0 = " Files "
