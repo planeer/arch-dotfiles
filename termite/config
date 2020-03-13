@@ -3,6 +3,7 @@ font = Monospace 9
 scrollback_lines = 10000
 
 [colors]
+background = rgba(63, 63, 63, 0.8)
 # If unset, will reverse foreground and background
 highlight = #0f0f0f
 

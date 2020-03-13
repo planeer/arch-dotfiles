@@ -8,6 +8,8 @@ Dotfiles for arch linux
     * .zshrc
     * .zprofile
     * .gtkrc-2.0
+    * .compton.conf
+    * .vimrc
 * ~/.config/:
     * i3
     * termite

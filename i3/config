@@ -190,6 +190,9 @@ for_window [class="Yad"] floating enable
 # Wallpaper
 exec --no-startup-id $set_wallpaper
 
+# Start compton
+exec --no-startup-id compton
+
 # Steam
 for_window [class="^Steam$" title="^Friends$"] floating enable
 for_window [class="^Steam$" title="Steam - News"] floating enable
