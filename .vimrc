@@ -46,6 +46,16 @@ set laststatus=2
 " Allow mouse click to move cursor
 set mouse=a
 
+" Tabs
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+
+" Max chars per line
+set colorcolumn=120
+highlight ColorColumn ctermbg=darkgray
+
 " Searching
 set hlsearch
 set incsearch
