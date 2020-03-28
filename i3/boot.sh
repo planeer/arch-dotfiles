@@ -7,13 +7,13 @@
 
 if [ $(hostname) = "floyd" ]; then
 	sleep 3 && . ~/.config/i3/monitor.sh
+	
+	# Auto start programs
+	i3-msg "workspace 3; workspace 9; append_layout ~/.config/i3/workspace-9.json"
+	teams &
+	
+	i3-msg "workspace 10; append_layout ~/.config/i3/workspace-10.json"
+	slack &
+	discord &
 fi
-
-# Auto start programs
-i3-msg "workspace 3; workspace 9; append_layout ~/.config/i3/workspace-9.json"
-teams &
-
-i3-msg "workspace 10; append_layout ~/.config/i3/workspace-10.json"
-slack &
-discord &
 
