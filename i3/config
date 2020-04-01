@@ -16,6 +16,13 @@ set $set_wallpaper feh --bg-fill ~/Documents/wallpaper.jpg
 # is used in the bar {} block below.
 font pango:monospace 8
 
+# class                 border  bground text    indicator child_border
+client.focused          #39CCA4 #39CCA4 #000000 #24BABA   #41E8BB
+client.focused_inactive #5F676A #5F676A #FFFFFF #484E50   #5F676A
+client.unfocused        #222222 #222222 #888888 #292D2E   #222222
+client.urgent           #E83838 #E83838 #000000 #900000   #E83838
+client.placeholder      #0C0C0C #0C0C0C #FFFFFF #000000   #0C0C0C
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -180,6 +187,9 @@ bindsym $mod+button3 floating toggle
 # The side buttons move the window around
 bindsym button9 move left
 bindsym button8 move right
+
+gaps outer 2
+gaps inner 2
 
 # Load some programmes on boot
 exec --no-startup-id ~/.config/i3/boot.sh
