@@ -120,3 +120,6 @@ alias projektarna='cd ~/Documents/PROJEKTARNA'
 alias random='cd ~/Documents/RANDOM'
 alias eavio='cd ~/Documents/WORK/eAvio'
 alias tuning='cd ~/Documents/WORK/Tuning'
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools

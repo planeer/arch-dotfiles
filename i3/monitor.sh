@@ -11,7 +11,7 @@ if [ $(hostname) = "floyd" ]; then
 
 	xrandr \
 	   	--output DP-1 --mode 1680x1050 --rate 60 --pos 1280x0 --primary \
-		--output DP-3 --mode 1280x1024 --rate 60 --pos $DP3pos \
+		--output DP-2 --mode 1680x1050 --rate 60 --pos $DP3pos \
 		--output DP-5 --mode 1280x1024 --rate 60 --pos 0x0
 fi
 
