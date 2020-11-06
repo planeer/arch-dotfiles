@@ -8,7 +8,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" All of your Plugins must be added before the following line
 Plugin 'morhetz/gruvbox'
 
 Plugin 'airblade/vim-gitgutter'
@@ -19,11 +18,29 @@ Plugin 'plasticboy/vim-markdown'
 
 Plugin 'iamcco/markdown-preview.nvim'
 
+Plugin 'tmhedberg/SimpylFold'
+
+Plugin 'vim-scripts/indentpython.vim'
+
+Plugin 'valloric/youcompleteme'
+
+Plugin 'vim-syntastic/syntastic'
+
+Plugin 'nvie/vim-flake8'
+
+Plugin 'kien/ctrlp.vim'
+
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+" All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
 
 " Turn on syntax highlighting
 syntax on
+let python_highlight_all=1
 
 " Security
 set modelines=0
@@ -50,6 +67,13 @@ set laststatus=2
 " Allow mouse click to move cursor
 set mouse=a
 
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" Enable folding with the spacebar
+nnoremap <space> za
+
 " Tabs
 set tabstop=4
 set softtabstop=4
@@ -66,6 +90,24 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
+
+" PEP 8 indentation
+au BufNewFile, BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" html, js, css indentation
+au BufNewFile, BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
+au BufRead, BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 " Colorscheme
 colorscheme gruvbox
@@ -115,4 +157,20 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " plasticboy/vim-markdown
 autocmd FileType markdown let conceallevel=0
 autocmd FileType markdown normal zR
+
+" tmhedberg/SimpylFold
+let g:SimpylFold_docstring_preview=1
+
+" valloric/youcompleteme
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+py3 << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
 
