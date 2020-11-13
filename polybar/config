@@ -100,7 +100,7 @@ spacing = 4
 mount-0 = /
 mount-1 = /home
 
-label-mounted = %{F#84b3ff}%mountpoint%%{F-}: %percentage_free%%
+label-mounted = %{F#84b3ff}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted =
 label-unmounted-foreground = ${colors.foreground-alt}
 
