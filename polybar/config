@@ -8,7 +8,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/example]
+[bar/upper_bar]
 monitor = ${env:MONITOR:}
 width = 100%
 height = 20
@@ -31,39 +31,12 @@ font-2 = Siji:pixelsize=10;0
 font-3 = "FontAwesome:size=10;0"
 
 modules-left = i3
-modules-right = wired-network wireless-network battery volume  xbacklight popup-calendar
+modules-right = memory cpu temperature filesystem wired-network wireless-network battery volume xbacklight popup-calendar
 
 tray-position = right
 tray-padding = 2
 
 bottom = false
-
-[bar/bottom]
-monitor = ${env:MONITOR:}
-width = 100%
-height = 20
-fixed-center = false
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-
-padding-left = 2
-padding-right = 3
-
-module-margin-left = 2
-module-margin-right = 2
-
-font-0 = fixed:pixelsize=9;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = Siji:pixelsize=10;0
-font-3 = "FontAwesome:size=10;0"
-
-modules-left = filesystem menu-apps
-modules-right = memory cpu temperature temperature_laptop
-
-bottom = true
 
 [module/menu-apps]
 type = custom/menu
@@ -93,20 +66,9 @@ menu-0-3 = "  "
 menu-0-3-exec = systemctl poweroff
 menu-0-3-foreground = ${colors.foreground}
 
-[module/pacman-updates]
-type = custom/script
-;exec = pacman -Qu | wc -l
-exec = pacman -Qu | wc -l
-interval = 1000
-label = %output%
-format-foreground = ${colors.foreground}
-format-background = ${colors.background}
-format-prefix = " "
-format-prefix-foreground = #FFBB00
-
 [module/wired-network]
 type = internal/network
-interface = enp3s0
+interface = enp42s0
 interval = 1.0
 
 format-connected-prefix = 
@@ -138,7 +100,7 @@ spacing = 4
 mount-0 = /
 mount-1 = /home
 
-label-mounted = %{F#84b3ff}%mountpoint%%{F-}: %free%
+label-mounted = %{F#84b3ff}%mountpoint%%{F-}: %percentage_free%%
 label-unmounted =
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -169,16 +131,16 @@ label-urgent = %icon%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
-ws-icon-0 = 1;I
-ws-icon-1 = 2;II
-ws-icon-2 = 3;III
-ws-icon-3 = 4;IV
-ws-icon-4 = 5;V
-ws-icon-5 = 6;VI
-ws-icon-6 = 7;VII
-ws-icon-7 = 8;VIII
-ws-icon-8 = 9;IX
-ws-icon-9 = 10;X
+ws-icon-0 = 1;1
+ws-icon-1 = 2;2
+ws-icon-2 = 3;3
+ws-icon-3 = 4;4
+ws-icon-4 = 5;5
+ws-icon-5 = 6;6
+ws-icon-6 = 7;7
+ws-icon-7 = 8;8
+ws-icon-8 = 9;9
+ws-icon-9 = 10;0
 
 [module/xbacklight]
 type = internal/xbacklight
@@ -200,52 +162,13 @@ card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
-
-format = <ramp-coreload>
-
-format-prefix = " "
-
-ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
-ramp-coreload-0-foreground = #aaff77
-ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
-ramp-coreload-1-foreground = #aaff77
-ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
-ramp-coreload-2-foreground = #aaff77
-ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
-ramp-coreload-3-foreground = #aaff77
-ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = #fba922
-ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = #fba922
-ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
-ramp-coreload-6-foreground = #ff5555
-ramp-coreload-7 = █
-ramp-coreload-7-font = 2
-ramp-coreload-7-foreground = #ff5555
+format = <label>
+label = CPU %percentage%%
 
 [module/memory]
 type = internal/memory
-
-format = <bar-used>
-
-format-prefix = " "
-
-bar-used-indicator =
-bar-used-width = 50
-bar-used-foreground-0 = #55aa55
-bar-used-foreground-1 = #557755
-bar-used-foreground-2 = #f5a70a
-bar-used-foreground-3 = #ff5555
-bar-used-fill = |
-bar-used-empty = |
-bar-used-empty-foreground = #444444
+format = <label>
+label = RAM %percentage_used%%
 
 [module/volume]
 type = internal/volume
@@ -285,7 +208,7 @@ animation-charging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
+hwmon-path = /sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon0/temp2_input 
 thermal-zone = 5
 warn-temperature = 70
 
@@ -334,3 +257,4 @@ type = custom/script
 exec = ~/.config/polybar/popup-calendar.sh
 interval = 1
 click-left = ~/.config/polybar/popup-calendar.sh --popup
+
