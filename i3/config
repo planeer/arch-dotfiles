@@ -38,7 +38,7 @@ client.placeholder      #0C0C0C #0C0C0C #FFFFFF #000000   #0C0C0C
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill

@@ -12,7 +12,7 @@ Dotfiles for arch linux
     * .vimrc
 * ~/.config/:
     * i3
-    * termite
+    * alacritty
     * ranger
     * rofi
     * polybar
