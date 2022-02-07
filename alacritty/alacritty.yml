@@ -2,6 +2,7 @@ window:
   padding:
     x: 5
     y: 5
+  opacity: 0.9
 
 font:
   normal:
@@ -45,8 +46,6 @@ colors:
     magenta: '0xe0e0e0'
     cyan:    '0xa3685a'
     white:   '0xffffff'
-
-background_opacity: 0.9
 
 selection:
   save_to_clipboard: true
