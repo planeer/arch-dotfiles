@@ -8,7 +8,12 @@
 if [ $(hostname) = "floyd" ]; then
 	sleep 3 && . ~/.config/i3/monitor.sh
 	
-	# Auto start programs
+	# Auto start programs and move workspaces to correct monitor
+
+	# Move workspace 1 to middle monitor and workspace 2 to left
+	i3-msg "workspace 1; workspace 4; workspace 2; workspace 1; workspace 4; workspace 2"
+
+	# Open on right monitor
 	i3-msg "workspace 3; workspace 9; append_layout ~/.config/i3/workspace-9.json"
 	teams &
 	
