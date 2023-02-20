@@ -14,10 +14,7 @@ if [ $(hostname) = "floyd" ]; then
 	i3-msg "workspace 1; workspace 4; workspace 2; workspace 1; workspace 4; workspace 2"
 
 	# Open on right monitor
-	i3-msg "workspace 3; workspace 9; append_layout ~/.config/i3/workspace-9.json"
-	teams &
-	
-	i3-msg "workspace 10; append_layout ~/.config/i3/workspace-10.json"
+	i3-msg "workspace 3; workspace 10; append_layout ~/.config/i3/workspace-10.json"
 	slack &
 	discord &
 fi

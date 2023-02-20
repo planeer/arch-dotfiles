@@ -23,7 +23,7 @@
 				{
 					"class": "^Slack$",
 					"instance": "^slack$",
-					"title": "^Slack",
+					"title": "Slack",
 					"window_role": "^browser\\-window$"
                }
             ],
@@ -48,7 +48,7 @@
 		{
 			"class": "^discord$",
 			"instance": "^discord$",
-			"title": "^Discord$",
+			"title": "Discord$",
 			"window_role": "^browser\\-window$"
 		}
     ],
